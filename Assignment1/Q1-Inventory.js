@@ -61,25 +61,22 @@ const inventory = [];
 // Adding items
 addItem(inventory, new Item(1, 'Apple', 50, 0.5));
 addItem(inventory, new Item(2, 'Banana', 30, 0.3));
+console.log("Initial Inventory:",inventory);
+
+
+
 addItem(inventory, new Item(3, 'Orange', 20, 0.7));
+console.log("Adding Item:",inventory);
 
-
-console.log("Main Inventory:")
-printInventory(inventory);
 
 // Updating an item
 updateItem(inventory, 2, { name: 'Green Banana', quantity: 25 });
+console.log("Updating Item:",inventory);
 
 
-console.log("Inventory after update:")
-printInventory(inventory);
 
-
-const item = getItem(inventory, 3);
-console.log('Retrieved Item:', item);
 
 
 deleteItem(inventory, 1);
+console.log("Deleting Item:",inventory);
 
-console.log("After deletion:");
-printInventory(inventory);
