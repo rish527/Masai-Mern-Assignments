@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Practice</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .message {
+            display: none;
+            margin-top: 5px;
+            color: red;
+        }
+        .toggled-color {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .set{
+            max-width: 10rem;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Handling Practice</h1>
+    <div class="set">
+        <button id="button1" class="button">Button 1</button>
+        <div id="message1" class="message">Mouse over Button 1</div>
+    </div>
+    
+
+    <div class="set">
+        <button id="button2" class="button">Button 2</button>
+        <div id="message2" class="message">Mouse over Button 2</div>
+    </div>
+
+    <div class="set">
+        <button id="button3" class="button">Button 3</button>
+        <div id="message3" class="message">Mouse over Button 3</div>
+    </div>
+
+    <script >
+        // console.log("fuck");
+        const butt=document.getElementsByClassName("button");
+        const butt1=document.getElementById("button1")
+        const butt2=document.getElementById("button2")
+        const butt3=document.getElementById("button3")
+
+        for(const but of butt){
+            but.addEventListener('click',()=>{
+                console.log('clicked');
+                but.classList.toggle('toggled-color');
+            })
+            but.addEventListener('mouseover',()=>{
+                const id=but.id;
+                const mes=document.getElementById("message"+id.charAt(id.length-1));
+                mes.style.display='block';
+            })
+            but.addEventListener('mouseout',()=>{
+                const id=but.id;
+                const mes=document.getElementById("message"+id.charAt(id.length-1));
+                mes.style.display='none';
+            })
+        }
+
+    </script>
+</body>
+</html>
