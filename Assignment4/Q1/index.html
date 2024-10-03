@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../src/output.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body class="w-screen h-screen flex items-center justify-center">
+    <div class="container flex flex-col justify-center items-center gap-5">
+        <div class="user-input justify-center gap-5">
+            <input id="mm-input" type="number" class="hour p-1 bg-gray-100 rounded-lg">
+            <input id="ss-input" type="number" class="second p-1 bg-gray-100 rounded-lg">
+            <button id="submit" class="border-2 px-2 py-1 rounded-xl">Submit</button>
+        </div>
+        <div class="timer items-center gap-0.5 font-medium text-7xl hidden" id="timer">
+            <h1 id="mm">60</h1>
+            <h1 class="text-6xl">:</h1>
+            <h1 id="ss">00</h1>
+        </div>
+
+        <div id="control" class="control justify-center gap-3 hidden" style="width:100%;">
+            <button id="reset" class="border-2 px-2 py-1 rounded-md">Reset</button>
+            <button id="puse-play" class="border-2 px-2 py-1 rounded-md">Pause</button>
+            <button id="stop" class="border-2 px-2 py-1 rounded-md">Stop</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
